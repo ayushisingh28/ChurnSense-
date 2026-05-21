@@ -10,7 +10,7 @@ import pickle
 
 app = Flask("__name__")
 
-df_1=pd.read_csv("first_telc.csv")
+df_1=pd.read_csv("ChurnSense/first_telc.csv")
 
 q = ""
 
@@ -66,7 +66,7 @@ def predict():
     inputQuery18 = request.form['query18']
     inputQuery19 = request.form['query19']
 
-    model = pickle.load(open("model.sav", "rb"))
+    model = pickle.load(open("ChurnSense/model.sav", "rb"))
     
     data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5, inputQuery6, inputQuery7, 
              inputQuery8, inputQuery9, inputQuery10, inputQuery11, inputQuery12, inputQuery13, inputQuery14,
